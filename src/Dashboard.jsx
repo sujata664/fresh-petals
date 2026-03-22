@@ -19,7 +19,7 @@ const Dashboard = () => {
 
           <div className="bg-white rounded-3xl shadow-2xl p-6 m-3 flex flex-col items-center">
               <p className="font-semibold text-2xl text-center mb-4">Product</p>
-              <NavLink to="/product">
+              <NavLink to="/products">
                 <button className="px-6 py-3 bg-orange-500 text-white rounded-full hover:bg-orange-700 transition duration-300 transform hover:-translate-y-2">
                   Update
                 </button>

@@ -2,35 +2,74 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Nav from './Nav'
 import Foot from './Foot'
+
 const Login = () => {
   return (
     <>
+      <Nav />
 
-    <Nav></Nav>
+      <div className='relative min-h-screen p-5 flex flex-col items-center justify-center bg-gradient-to-br from-green-50 via-white to-pink-50'>
 
-   <div className='bg-gray-100 h-svh p-5'>
-   <h1 className="text-4xl font-bold underline justify-center text-center my-5">
-     Login
-    </h1>
+      
+        <img 
+          src="/imggg/login2.png"
+          alt="leaf"
+          className="absolute top-0 left-0 w-72 opacity-90 -translate-x-6 -translate-y-10"
+        />
 
-    <div className="flex flex-col px-4 sm:px-6 items-center lg:px-8">
-    <div className=" lg:flex-row items-center my-10  bg-white rounded-3xl shadow-2xl lg:h-96 lg:w-4/12 p-6">
-        <label className='p-2 font-semibold'>Email</label><br />
-    <input type='text' id="email" placeholder='Email' required className=' bg-gray-200 rounded-lg p-2  lg:w-3/4 m-2'></input><br/>
-    <label className='p-2 font-semibold'>Password</label><br/>
-    <input type='text' id="email" placeholder='Password' required className=' bg-gray-200 rounded-lg p-2 lg:w-3/4 m-2' ></input><br/>
-    <Link to="/dashboard">
-    <button className="px-6 py-3 my-8 bg-amber-500 text-white rounded-full hover:text-black transition duration-300 transform hover:-translate-y-2">
-              Login
-            </button>
-    </Link>
-    <div>Don't have an account?<Link to="/Register"
-    className=" text-gray-500  hover:text-black "> Register.
-    </Link></div>
-    </div>
-    </div>
-    </div>
-    <Foot></Foot>
+       
+        <img 
+          src="/imggg/login.png"
+          alt="leaf"
+          className="absolute bottom-0 right-0 w-72 opacity-90  translate-y-10"
+        />
+
+        
+        <h1 className="text-4xl font-serif font-bold text-center my-5 text-green-900 tracking-wide">
+         Login 🌿
+        </h1>
+
+       
+        <div className="flex flex-col items-center w-full">
+          <div className="bg-white/70 backdrop-blur-lg rounded-3xl shadow-xl w-full max-w-md p-10 border border-white/40">
+
+           
+            <label className='font-semibold text-gray-700'>Email</label>
+            <input 
+              type='text' 
+              placeholder='Enter your email' 
+              className='bg-white/60 border border-gray-200 rounded-xl p-3 w-full mt-2 mb-4 focus:outline-none focus:ring-2 focus:ring-green-200'
+            />
+
+           
+            <label className='font-semibold text-gray-700'>Password</label>
+            <input 
+              type='password' 
+              placeholder='Enter your password' 
+              className='bg-white/60 border border-gray-200 rounded-xl p-3 w-full mt-2 mb-4 focus:outline-none focus:ring-2 focus:ring-green-200'
+            />
+
+            
+            <Link to="/dashboard">
+              <button className="w-full py-3 mt-4 bg-gradient-to-r from-amber-400 to-orange-500 text-white rounded-full shadow-md hover:scale-105 transition duration-300">
+                Login
+              </button>
+            </Link>
+
+            
+            <p className="mt-4 text-sm text-center text-gray-600">
+              Don't have an account?{" "}
+              <Link to="/Register" className="text-green-800 font-semibold hover:underline">
+                Register
+              </Link>
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+
+      <Foot />
     </>
   )
 }

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Foot = () => {
   return (
    <>
-  <div className='bg-green-800 text-white p-6  '>
+ <div className='bg-green-800 text-white py-10 mt-auto'>
 
     <div className='flex flex-wrap px-10 pt-10 items-center justify-center gap-24 text-lg'>
  
