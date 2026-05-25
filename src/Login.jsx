@@ -50,7 +50,7 @@ const Login = () => {
             />
 
             
-            <Link to="/dashboard">
+            <Link to="/">
               <button className="w-full py-3 mt-4 bg-gradient-to-r from-amber-400 to-orange-500 text-white rounded-full shadow-md hover:scale-105 transition duration-300">
                 Login
               </button>

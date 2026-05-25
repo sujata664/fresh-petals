@@ -53,34 +53,38 @@ const Product = () => {
 
         </div>
 
-        {/* Products Section */}
-        <div className='flex flex-wrap items-center justify-center max-w-6xl bg-gray-100'>
-          {products.map(item => (
-            <div key={item.id} className="bg-white h-auto w-52 m-4 mt-8 shadow-lg rounded-xl overflow-hidden hover:scale-105 transition duration-300">
-              <img
-                src={`http://localhost:5000/uploads/${item.image}`}
-                alt={item.name}
-                className="w-full h-40 object-cover"
-              />
-              <div className="p-4">
-                <h2 className="text-xl font-semibold">{item.name}</h2>
-                <p className='m-2 text-center font-serif underline'>
-                  Rs: {item.price}
-                </p>
-                <p className='text-gray-500 text-center'>Stock: {item.quantity}</p>
-                <p className='text-gray-600 text-center'>{item.category}</p>
-                <Link
-                  to=""
-                  className="inline-block mt-4 bg-green-800 text-white px-4 py-2 rounded-lg hover:bg-green-900"
-                >
-                  View Details
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
+      <div className="flex flex-wrap justify-center max-w-6xl mx-auto bg-gray-100">
+  {products.map(item => (
+    <div
+      key={item.id}
+      className="bg-white w-52 m-4 mt-8 shadow-lg rounded-xl overflow-hidden hover:scale-105 transition duration-300 flex flex-col"
+    >
+      <img
+        src={`http://localhost:5000/uploads/${item.image}`}
+        alt={item.name}
+        className="w-full h-40 object-cover"
+      />
 
-        
+      <div className="p-4 flex flex-col flex-1">
+        <h2 className="text-xl font-semibold">{item.name}</h2>
+
+        <p className="m-2 text-center font-serif underline">
+          Rs: {item.price}
+        </p>
+
+        <p className="text-gray-500 text-center">Stock: {item.quantity}</p>
+        <p className="text-gray-600 text-center">Category: {item.category}</p>
+
+        <Link
+          to=""
+          className="mt-auto inline-block bg-green-800 text-white px-4 py-2 rounded-lg hover:bg-green-900 text-center"
+        >
+          View Details
+        </Link>
+      </div>
+    </div>
+  ))}
+</div>
         <div className='m-10'>
           <h2 className="font-bold text-lg">Shop By Occasion</h2>
           <ul className="text-sm space-y-1 mt-2">
